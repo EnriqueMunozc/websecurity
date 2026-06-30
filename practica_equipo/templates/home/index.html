@@ -1,14 +1,142 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>IT Asset Manager</title>
-</head>
-<body>
+<!--index.html-->
 
-    <h1>🚀 IT Asset Manager</h1>
+{% extends 'layouts/base.html' %}
 
-    <p>Mi primer proyecto con Django.</p>
+{% block title %}Inicio{% endblock %}
 
-</body>
-</html>
+{% block content %}
+
+<section class="container py-5">
+
+    <div class="row align-items-center">
+
+        <div class="col-lg-6">
+
+            <h1 class="display-3 fw-bold">
+
+                Sistema de Gestión de Equipos TI
+
+            </h1>
+
+            <p class="lead mt-4">
+
+                Administra laptops y celulares, asigna equipos a empleados y
+                consulta el historial de movimientos desde un solo lugar.
+
+            </p>
+
+            <div class="mt-4">
+
+                <a href="#" class="btn btn-primary btn-lg">
+
+                    Comenzar
+
+                </a>
+
+                <a href="#funciones" class="btn btn-outline-dark btn-lg">
+
+                    Conocer más
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-6 text-center">
+
+            <i class="bi bi-laptop display-1"></i>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="funciones" class="container pb-5">
+
+    <div class="row">
+
+        <div class="col-md-4">
+
+            <div class="card shadow">
+
+                <div class="card-body text-center">
+
+                    <i class="bi bi-laptop display-4 text-primary"></i>
+
+                    <h3 class="mt-3">
+
+                        Inventario
+
+                    </h3>
+
+                    <p>
+
+                        Control de laptops y celulares.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card shadow">
+
+                <div class="card-body text-center">
+
+                    <i class="bi bi-people display-4 text-success"></i>
+
+                    <h3 class="mt-3">
+
+                        Empleados
+
+                    </h3>
+
+                    <p>
+
+                        Administración de usuarios y responsables.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card shadow">
+
+                <div class="card-body text-center">
+
+                    <i class="bi bi-clipboard-check display-4 text-warning"></i>
+
+                    <h3 class="mt-3">
+
+                        Asignaciones
+
+                    </h3>
+
+                    <p>
+
+                        Registro de préstamos y devoluciones.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
