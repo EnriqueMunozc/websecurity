@@ -73,3 +73,53 @@ body{
     box-shadow:0 2px 15px rgba(0,0,0,.1);
 
 }
+
+/*Dashboard dinamico */
+
+body{
+
+background:#f4f7fb;
+
+}
+
+.card{
+
+border:none;
+
+border-radius:15px;
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.card-header{
+
+font-weight:bold;
+
+}
+
+h1{
+
+font-weight:bold;
+
+}
+
+.list-group-item{
+
+transition:.3s;
+
+}
+
+.list-group-item:hover{
+
+background:#eef6ff;
+
+}

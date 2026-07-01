@@ -1,0 +1,217 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+<h2 class="mb-4">
+
+Dashboard
+
+</h2>
+
+<div class="row g-4">
+
+<div class="col-md-3">
+
+<div class="card shadow text-center">
+
+<div class="card-body">
+
+<h1>
+
+{{ total_equipos }}
+
+</h1>
+
+<h5>
+
+Equipos
+
+</h5>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card shadow text-center">
+
+<div class="card-body">
+
+<h1>
+
+{{ total_empleados }}
+
+</h1>
+
+<h5>
+
+Empleados
+
+</h5>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card shadow text-center">
+
+<div class="card-body">
+
+<h1>
+
+{{ total_asignaciones }}
+
+</h1>
+
+<h5>
+
+Asignaciones
+
+</h5>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card shadow text-center">
+
+<div class="card-body">
+
+<h1>
+
+{{ total_eventos }}
+
+</h1>
+
+<h5>
+
+Eventos
+
+</h5>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="row mt-5">
+
+<div class="col-md-6">
+
+<div class="card shadow">
+
+<div class="card-header">
+
+Resumen
+
+</div>
+
+<div class="card-body">
+
+<p>
+
+Equipos disponibles:
+
+<strong>
+
+{{ disponibles }}
+
+</strong>
+
+</p>
+
+<p>
+
+Equipos asignados:
+
+<strong>
+
+{{ asignados }}
+
+</strong>
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<div class="card shadow">
+
+<div class="card-header">
+
+Últimos eventos
+
+</div>
+
+<ul class="list-group list-group-flush">
+
+{% for evento in eventos %}
+
+<li class="list-group-item">
+
+<strong>
+
+{{ evento.tipo }}
+
+</strong>
+
+<br>
+
+{{ evento.descripcion }}
+
+<br>
+
+<small class="text-muted">
+
+{{ evento.fecha|date:"d/m/Y H:i" }}
+
+</small>
+
+</li>
+
+{% empty %}
+
+<li class="list-group-item">
+
+No hay eventos.
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}
