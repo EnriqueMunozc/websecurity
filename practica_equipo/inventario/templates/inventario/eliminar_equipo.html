@@ -1,0 +1,45 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="alert alert-danger">
+
+        <h3>
+
+            ¿Eliminar este equipo?
+
+        </h3>
+
+        <p>
+
+            {{ equipo }}
+
+        </p>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <button class="btn btn-danger">
+
+                Sí, eliminar
+
+            </button>
+
+            <a
+                href="{% url 'lista_equipos' %}"
+                class="btn btn-secondary">
+
+                Cancelar
+
+            </a>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}
