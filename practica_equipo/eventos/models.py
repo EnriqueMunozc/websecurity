@@ -3,19 +3,26 @@ from django.db import models
 
 class Evento(models.Model):
 
+    TIPO_EVENTO = [
+
+        ("Equipo", "Equipo"),
+        ("Empleado", "Empleado"),
+        ("Asignación", "Asignación"),
+        ("Sistema", "Sistema"),
+
+    ]
+
+    tipo = models.CharField(
+        max_length=20,
+        choices=TIPO_EVENTO
+    )
+
     descripcion = models.TextField()
 
     fecha = models.DateTimeField(
         auto_now_add=True
     )
 
-    modulo = models.CharField(
-        max_length=30
-    )
-
-    usuario = models.CharField(
-        max_length=50
-    )
-
     def __str__(self):
-        return f"{self.fecha.strftime('%d/%m/%Y %H:%M')} - {self.modulo}"
+
+        return f"{self.tipo} - {self.fecha.strftime('%d/%m/%Y %H:%M')}"

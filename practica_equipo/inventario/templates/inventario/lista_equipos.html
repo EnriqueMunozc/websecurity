@@ -71,7 +71,29 @@ Inventario
 
                 <td>{{ equipo.modelo }}</td>
 
-                <td>{{ equipo.estado }}</td>
+                <td>
+
+                    {% if equipo.estado == "Disponible" %}
+
+                    <span class="badge bg-success">
+                        Disponible
+                    </span>
+
+                    {% elif equipo.estado == "Asignado" %}
+
+                    <span class="badge bg-danger">
+                        Asignado
+                    </span>
+
+                    {% else %}
+
+                    <span class="badge bg-secondary">
+                        {{ equipo.estado }}
+                    </span>
+
+                    {% endif %}
+
+                </td>
 
                 <td>
 

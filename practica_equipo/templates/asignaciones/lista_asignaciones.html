@@ -1,0 +1,91 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+<h2>
+
+Asignaciones
+
+</h2>
+
+<a href="{% url 'crear_asignacion' %}"
+
+class="btn btn-primary mb-3">
+
+Nueva Asignación
+
+</a>
+
+<table class="table table-striped">
+
+<thead>
+
+<tr>
+
+<th>Empleado</th>
+
+<th>Equipo</th>
+
+<th>Fecha</th>
+
+<th>Observaciones</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for a in asignaciones %}
+
+<tr>
+
+<td>
+
+{{ a.empleado }}
+
+</td>
+
+<td>
+
+{{ a.equipo }}
+
+</td>
+
+<td>
+
+{{ a.fecha_asignacion }}
+
+</td>
+
+<td>
+
+{{ a.observaciones }}
+
+</td>
+
+</tr>
+
+{% empty %}
+
+<tr>
+
+<td colspan="4">
+
+No existen asignaciones.
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+</div>
+
+{% endblock %}

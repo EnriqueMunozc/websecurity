@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 
 from .models import Equipo
 from .forms import EquipoForm
-
+from eventos.models import Evento
 
 def lista_equipos(request):
 
@@ -28,6 +28,10 @@ def crear_equipo(request):
 
             formulario.save()
 
+            Evento.objects.create(
+                tipo = "Equipo Creado",
+                descripcion = f"Se ha creado un nuevo equipo con código {formulario.cleaned_data['codigo']}."
+            )
             return redirect("lista_equipos")
 
     else:
@@ -61,6 +65,10 @@ def editar_equipo(request, id):
         if formulario.is_valid():
 
             formulario.save()
+            Evento.objects.create(
+                tipo = "Equipo Editado",
+                descripcion = f"Se ha editado el equipo con código {formulario.cleaned_data['codigo']}."
+            )
 
             return redirect("lista_equipos")
 
@@ -90,6 +98,10 @@ def eliminar_equipo(request, id):
     if request.method == "POST":
 
         equipo.delete()
+        Evento.objects.create(
+            tipo = "Equipo Eliminado",
+            descripcion = f"Se ha eliminado el equipo con código {equipo.codigo}."
+        )
 
         return redirect("lista_equipos")
 
