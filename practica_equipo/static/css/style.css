@@ -37,3 +37,39 @@ body{
     box-shadow:0 15px 30px rgba(0,0,0,.15);
 
 }
+
+body{
+
+    background:#f4f7fb;
+
+}
+
+.card{
+
+    border:none;
+
+    border-radius:18px;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+}
+
+.display-4{
+
+    color:#0b5dd8;
+
+}
+
+.navbar{
+
+    box-shadow:0 2px 15px rgba(0,0,0,.1);
+
+}

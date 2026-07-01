@@ -21,11 +21,16 @@
             <ul class="navbar-nav ms-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Inicio</a>
-                </li>
+                    <a class="nav-link" href="{% url 'dashboard' %}">
+                        <i class="bi bi-speedometer2"></i>
+                        Dashboard
+                    </a>
+                </li
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Inventario</a>
+                    <a class="nav-link" href="{% url 'lista_equipos' %}">
+                        Inventario
+                    </a>
                 </li>
 
                 <li class="nav-item">
