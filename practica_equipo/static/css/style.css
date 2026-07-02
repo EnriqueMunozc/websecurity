@@ -1,5 +1,9 @@
 body{
-    background:#f5f7fa;
+    background:#061E0c;
+}
+.title_dash{
+    color: #03cc1d;
+    background-color: #03cc1d;
 }
 
 /* ===== Sidebar ===== */
@@ -20,6 +24,26 @@ body{
     padding-left:20px;
 }
 
+.botoninicio{
+    background-color:#03cc1d;
+    color:#fff;
+    border-color:#03cc1d;
+}
+
+.botoninicio:hover{
+    background-color:#02b31a;
+    border-color:#02b31a;
+    color:#fff;
+}
+
+.botoninicio:focus,
+.botoninicio:active{
+    background-color:#029d17;
+    border-color:#029d17;
+    color:#fff;
+    box-shadow:none;
+}
+
 /* ===== Dashboard ===== */
 
 .dashboard-card{
@@ -35,12 +59,6 @@ body{
     transform:translateY(-8px);
 
     box-shadow:0 15px 30px rgba(0,0,0,.15);
-
-}
-
-body{
-
-    background:#f4f7fb;
 
 }
 
@@ -77,112 +95,68 @@ body{
 /*Dashboard dinamico */
 
 .card{
-
     animation:fadeInUp .7s ease both;
-
 }
 
-/* Retraso para cada tarjeta */
-
 .row .col-md-3:nth-child(1) .card{
-
     animation-delay:.1s;
-
 }
 
 .row .col-md-3:nth-child(2) .card{
-
     animation-delay:.3s;
-
 }
 
 .row .col-md-3:nth-child(3) .card{
-
     animation-delay:.5s;
-
 }
 
 .row .col-md-3:nth-child(4) .card{
-
     animation-delay:.7s;
-
 }
-
-/* Íconos */
 
 .card i{
-
     transition:.4s ease;
-
 }
-
-/* Número */
 
 .card h1{
-
     transition:.4s ease;
-
 }
-
-/* Título */
 
 .card h5{
-
     transition:.3s ease;
-
 }
 
-/* Hover */
-
 .card:hover i{
-
     transform:rotate(-12deg) scale(1.2);
-
 }
 
 .card:hover h1{
-
     transform:scale(1.12);
-
     color:#ffffff;
-
 }
 
 .card:hover h5{
-
     letter-spacing:1px;
-
 }
 
-/* Efecto brillo */
-
 .card::before{
-
     content:"";
-
     position:absolute;
-
     top:0;
-
     left:-120%;
-
     width:60%;
-
     height:100%;
-
     background:linear-gradient(
         120deg,
         transparent,
         rgba(255,255,255,.45),
         transparent
     );
-
     transition:.8s;
 
 }
 
 .card{
-
     position:relative;
 
     overflow:hidden;
