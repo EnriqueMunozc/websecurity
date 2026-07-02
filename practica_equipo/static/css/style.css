@@ -76,50 +76,166 @@ body{
 
 /*Dashboard dinamico */
 
-body{
+.card{
 
-background:#f4f7fb;
+    animation:fadeInUp .7s ease both;
+
+}
+
+/* Retraso para cada tarjeta */
+
+.row .col-md-3:nth-child(1) .card{
+
+    animation-delay:.1s;
+
+}
+
+.row .col-md-3:nth-child(2) .card{
+
+    animation-delay:.3s;
+
+}
+
+.row .col-md-3:nth-child(3) .card{
+
+    animation-delay:.5s;
+
+}
+
+.row .col-md-3:nth-child(4) .card{
+
+    animation-delay:.7s;
+
+}
+
+/* Íconos */
+
+.card i{
+
+    transition:.4s ease;
+
+}
+
+/* Número */
+
+.card h1{
+
+    transition:.4s ease;
+
+}
+
+/* Título */
+
+.card h5{
+
+    transition:.3s ease;
+
+}
+
+/* Hover */
+
+.card:hover i{
+
+    transform:rotate(-12deg) scale(1.2);
+
+}
+
+.card:hover h1{
+
+    transform:scale(1.12);
+
+    color:#ffffff;
+
+}
+
+.card:hover h5{
+
+    letter-spacing:1px;
+
+}
+
+/* Efecto brillo */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transition:.8s;
 
 }
 
 .card{
 
-border:none;
+    position:relative;
 
-border-radius:15px;
+    overflow:hidden;
 
-transition:.3s;
+}
+
+.card:hover::before{
+
+    left:150%;
+
+}
+
+/* Animación */
+
+@keyframes fadeInUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
 
 }
 
 .card:hover{
 
-transform:translateY(-8px);
+    background:#03cc1d;
+    color:#fff;
 
-box-shadow:0 10px 30px rgba(0,0,0,.15);
+    transform:translateY(-8px);
 
-}
-
-.card-header{
-
-font-weight:bold;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
 
 }
 
-h1{
+/* Cambiar el color de los íconos y textos */
 
-font-weight:bold;
+.card:hover i,
+.card:hover h1,
+.card:hover h5,
+.card:hover p{
 
-}
-
-.list-group-item{
-
-transition:.3s;
-
-}
-
-.list-group-item:hover{
-
-background:#eef6ff;
+    color:#fff !important;
 
 }
+
