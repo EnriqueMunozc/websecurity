@@ -80,12 +80,5 @@ e.target.style.background="";
 
 });
 
-document.addEventListener("dblclick",(e)=>{
 
-if(e.target.tagName=="TD"){
 
-alert("Equipo seleccionado");
-
-}
-
-});
